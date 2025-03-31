@@ -1,19 +1,30 @@
+def trap(heights):
+    Lmax = []
+    max =-1
+    for i in range(len(heights)):
+        if heights[i]>max :
+            max = heights[i]
+        Lmax.append(max) 
+    
+    max =-1
+    print(Lmax)
+    for i in range(len(heights)-1,-1,-1):
+        Lmax[i]= min(Lmax[i-1],max) 
+        if heights[i]>max :
+            max = heights[i]
+       
+    print(Lmax)
+    ans =0
+    for i in range(1,len(heights)-1):
+        stored = Lmax[i] - heights[i] 
+        if stored > 0 :
+            ans += stored 
+    return ans 
 
 
-def divideList(head):
-    # Write your code here.
-    # 1 
-    head1 = head
-    head2=head.next 
-    if not  head2 :
-        return None 
-    temp = head.next.next
-    count=2
-    while temp :
-        count=count+1
-        if count%2==1:
-            head1.next = temp 
-        else :
-            head2.next = temp 
-        temp = temp.next 
-    return [head1,head2]
+
+
+
+
+
+print(trap([4,2,0,3,2,5]))
