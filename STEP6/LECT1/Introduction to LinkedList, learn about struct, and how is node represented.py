@@ -150,19 +150,16 @@ def insert_before_NodeVal(head,val,NodeVal ):
 
 
 
-    
-    
 
-arr = [1,2,3,4]
+
+arr = [1,2,3,4,5]
 
 head =makeLLFromArr(arr)
 display(head)
 
-h1,h2 =divideList(head  )
 
 
-display(h1)
-display(h2)
+display(h)
 
   
 

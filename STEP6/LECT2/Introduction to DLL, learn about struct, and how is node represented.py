@@ -17,7 +17,6 @@ def DLL_from_arr(arr):
 
   return head 
 
-
 def display(head):
   temp=head 
   print(None , end=" <-> ")
@@ -48,7 +47,6 @@ def del_tail(head):
   temp.back.next = None 
   # temp.back = None no need of this line .. a node which has been dereferenced is elgible for garbage collector 
   return head 
-
 
 def del_kth_Node(head , k):
   #GIVEN range of k [1,DLL.length]
@@ -103,8 +101,6 @@ def del_kth_Node(head , k):
     prev.next  = front 
     front.back = prev 
   return head 
-
-
 
 #this will not be asked but below the below one is asked as that is very easy 
 #typically we  face c1 c2 
@@ -165,6 +161,7 @@ def insert_before_head(head,val):
   new_Node =  Node(val , head )
   head.back =new_Node 
   return new_Node 
+
 def insert_before_tail(head,val):
   if not head :
     return Node(val)
@@ -211,7 +208,6 @@ def insert_before_kth_ele(head,val,k):
     prev.next = new_Node 
     temp.back = new_Node 
   return head 
-
 
 def insert_before_given_node(node ,val):
   #given node is not head 
